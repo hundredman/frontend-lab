@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1::before {
+    content: "✨ ";
+}
+
+h1::after {
+    content: " ✨";
+}
+
+.highlight-box {
+    position: relative;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.highlight-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: coral;
+}
+
+.button::before {
+    content: "👉 ";
+}
+
+.button::after {
+    content: " 🚀";
+}
+
+blockquote {
+    font-style: italic;
+    color: #555;
+    margin: 20px 0;
+    position: relative;
+}
+
+blockquote::before {
+    content: open-quote;
+    font-size: 40px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    color: #ccc;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Advanced HTML</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Pseudo-element Example</h1>
+
+        <div class="highlight-box">
+            Important tip: Pseudo-elements let you add design without changing
+            HTML.
+        </div>
+
+        <p><button class="button">Click me</button></p>
+
+        <blockquote>
+            Always code as if the guy who ends up maintaining your code will be
+            a violent psychopath who knows where you live.
+        </blockquote>
+
+        <div id="host"></div>
+
+        <script>
+            const host = document.querySelector("#host");
+            const shadow = host.attachShadow({ mode: "open" });
+
+            shadow.innerHTML = `
+                <style>
+                p {
+                    color: tomato;
+                    font-weight: bold;
+                }
+                </style>
+                <p>This is inside the Shadow DOM</p>
+            `;
+        </script>
+
+        <my-box></my-box>
+
+        <script>
+        class MyBox extends HTMLElement {
+            constructor() {
+            super();
+            const shadow = this.attachShadow({ mode: "open" });
+            shadow.innerHTML = `
+                <style>
+                div {
+                    padding: 10px;
+                    background: lightblue;
+                    border-radius: 8px;
+                }
+                </style>
+                <div>This is a custom element using Shadow DOM!</div>
+            `;
+            }
+        }
+
+        customElements.define("my-box", MyBox);
+        </script>
+    </body>
+</html>

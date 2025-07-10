@@ -1,0 +1,352 @@
+body {
+    background-color: aliceblue;
+    font-family: "Noto Sans KR", sans-serif;
+    color: black;
+    margin: 30px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    text-align: center;
+    color: darkblue;
+}
+
+h2 {
+    color: deepskyblue;
+    border-bottom: 2px solid darkblue;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+ul {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px lightgray;
+}
+
+li {
+    margin: 8px 24px;
+}
+
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    margin: auto;
+    border-radius: 100px;
+    box-shadow: 0 0 10px lightgray;
+}
+
+.float-container {
+    width: 95%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: lightblue;
+}
+
+.float-img {
+    float: left;
+    margin-right: 20px;
+}
+
+.float-text {
+    overflow: hidden;
+}
+
+.inline-box {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.red-box {
+    background-color: red;
+}
+
+.green-box {
+    background-color: green;
+}
+
+.blue-box {
+    background-color: blue;
+}
+
+.blog-container .post {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border: 1px solid lightblue;
+    border-radius: 8px;
+}
+
+.post-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.thumb {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-right: 15px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.post-body {
+    overflow: hidden;
+}
+
+/* 화면이 768px 이하일 때 2줄로 줄임 */
+@media screen and (max-width: 768px) {
+  .post-body p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.post-body h3 {
+    margin: 0;
+    font-size: 20px;
+    color: darkblue;
+}
+
+.post-body p {
+    font-size: 14px;
+}
+
+.bg-section {
+    background-image: url("https://picsum.photos/2000/200");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 0 1px 2px black;
+    object-fit: cover;
+}
+
+.position-wrapper {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+    margin-bottom: 40px;
+}
+
+.pos-box {
+    width: 120px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.base-box {
+    background-color: darkblue;
+    position: relative;
+    z-index: 1;
+}
+
+.abs-box {
+    background-color: crimson;
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    z-index: 2;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightgray;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: dodgerblue;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 12px;
+    border: 1px solid darkblue;
+    vertical-align: middle;
+}
+
+.cart-table th {
+    background-color: skyblue;
+}
+
+.cart-table img {
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.total-row td {
+    background-color: whitesmoke;
+}
+
+/* 공통 버튼 기본 스타일 */
+button {
+    transition: all 0.3s ease; /* 부드러운 애니메이션 */
+}
+
+/* 마우스를 올렸을 때 */
+button:hover {
+    background-color: dodgerblue;
+    transform: scale(1.05); /* 살짝 커짐 */
+}
+
+/* 클릭할 때 */
+button:active {
+    transform: scale(0.95); /* 눌리는 느낌 */
+    background-color: darkblue;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* 박스 사이 여백 균등 분배 */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flex-box {
+  flex: 1 1 30%; /* 줄어들 수 있고, 기본은 30% 너비 */
+  min-width: 250px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 40px 0;
+  background-color: deepskyblue;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* 화면이 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  .flex-box {
+    flex: 1 1 100%; /* 한 줄에 하나씩 */
+  }
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.product-card {
+  min-width: 250px;
+  box-sizing: border-box;         /* padding과 border를 너비에 포함 */
+  width: 100%;                    /* 그리드 셀의 너비를 가득 채움 */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-card:hover {
+  transform: translateY(-8px); /* 살짝 떠오름 */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.product-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
