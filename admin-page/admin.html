@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="admin-page">
+    <aside class="sidebar">
+      <h2>관리자</h2>
+      <nav>
+        <ul>
+          <li><a href="#">대시보드</a></li>
+          <li><a href="#">회원 관리</a></li>
+          <li><a href="#">설정</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="sticky-header">
+        관리자 대시보드
+      </header>
+
+      <section class="stats-grid">
+        <div class="card">총 회원: 230명</div>
+        <div class="card">오늘 방문: 89명</div>
+        <div class="card">문의 메일: 12건</div>
+      </section>
+
+      <section class="user-table">
+        <h3>회원 목록</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>이름</th>
+              <th>이메일</th>
+              <th>가입일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>홍길동</td>
+              <td>hong@example.com</td>
+              <td>2023-11-01</td>
+            </tr>
+            <tr>
+              <td>김철수</td>
+              <td>kim@example.com</td>
+              <td>2024-01-12</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

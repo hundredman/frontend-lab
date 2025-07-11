@@ -1,0 +1,74 @@
+.admin-page {
+  display: flex;
+  min-height: 100vh;
+}
+.admin-page .sidebar {
+  width: 240px;
+  background: #333;
+  color: #eee;
+  padding: 20px;
+}
+.admin-page .sidebar h2 {
+  margin-bottom: 16px;
+}
+.admin-page .sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+.admin-page .sidebar nav ul li {
+  margin: 10px 0;
+}
+.admin-page .sidebar nav ul li a {
+  color: #eee;
+  text-decoration: none;
+}
+.admin-page .sidebar nav ul li a:hover {
+  text-decoration: underline;
+}
+.admin-page .main-panel {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 24px;
+}
+.admin-page .main-panel .sticky-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 12px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 100;
+  border-bottom: 1px solid #ccc;
+}
+.admin-page .main-panel .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.admin-page .main-panel .stats-grid .card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+.admin-page .main-panel .user-table {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+.admin-page .main-panel .user-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.admin-page .main-panel .user-table table th, .admin-page .main-panel .user-table table td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+.admin-page .main-panel .user-table table th {
+  background: #fafafa;
+}
+
+/*# sourceMappingURL=style.css.map */

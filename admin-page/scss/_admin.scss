@@ -1,0 +1,88 @@
+@use 'variables';
+
+.admin-page {
+  display: flex;
+  min-height: 100vh;
+
+  .sidebar {
+    width: 240px;
+    background: variables.$sidebar-bg;
+    color: variables.$text-light;
+    padding: 20px;
+
+    h2 {
+      margin-bottom: 16px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 10px 0;
+
+        a {
+          color: variables.$text-light;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .main-panel {
+    flex: 1;
+    background: variables.$main-bg;
+    padding: 24px;
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 12px 20px;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 100;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+
+      .card {
+        background: variables.$card-bg;
+        padding: 16px;
+        border-radius: variables.$radius;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+      }
+    }
+
+    .user-table {
+      background: variables.$card-bg;
+      padding: 20px;
+      border-radius: variables.$radius;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th, td {
+          text-align: left;
+          padding: 8px;
+          border-bottom: 1px solid #ddd;
+        }
+
+        th {
+          background: #fafafa;
+        }
+      }
+    }
+  }
+}
