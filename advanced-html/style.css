@@ -6,52 +6,61 @@
   margin-bottom: 20px;
 }
 
-.card {
-  transition: transform 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-10px) scale(1.02);
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f9f9f9;
+  padding: 40px 20px;
+  margin: 0;
+  text-align: center;
 }
 
-.btn-glow {
-  animation: pulse 2s infinite ease-in-out;
+h1 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #333;
 }
 
-.menu-container {
-  position: relative;
-}
-
-.slide-menu {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  width: 250px;
+.sidebar {
+  position: sticky;
+  top: 0;
   padding: 20px;
-  background: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  opacity: 0;
-  pointer-events: none;
+  background: #f0f0f0;
+  width: 150px;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0%);
-    opacity: 1;
-  }
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.slide-menu.active {
-  animation: slideIn 0.5s ease forwards;
-  pointer-events: auto;
+.grid-item {
+  background: #ddd;
+  border-radius: 8px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(25.5, 25.5, 25.5);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
+.grid-item:hover {
+  transform: scale(1.05);
+  background: #bbb;
+}
+
+.sticky-title {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 999;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+
+/*# sourceMappingURL=style.css.map */
