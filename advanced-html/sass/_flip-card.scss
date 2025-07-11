@@ -1,0 +1,51 @@
+.flip-card {
+  width: 250px;
+  height: 250px;
+  perspective: 1000px;
+  margin: 20px auto;
+
+  .flip-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  &:hover .flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-front,
+  .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flip-front {
+    background: #fff;
+    img {
+      width: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .flip-back {
+    background: #333;
+    color: white;
+    transform: rotateY(180deg);
+    a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+  }
+}
