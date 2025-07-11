@@ -1,54 +1,57 @@
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+.card {
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background: white;
+  margin-bottom: 20px;
 }
 
-h1::before {
-    content: "✨ ";
+.card {
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
 }
 
-h1::after {
-    content: " ✨";
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
-.highlight-box {
-    position: relative;
-    padding: 15px;
-    background: #f9f9f9;
-    border: 1px solid #ccc;
-    margin-top: 20px;
+.btn-glow {
+  animation: pulse 2s infinite ease-in-out;
 }
 
-.highlight-box::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 5px;
-    height: 100%;
-    background-color: coral;
+.menu-container {
+  position: relative;
 }
 
-.button::before {
-    content: "👉 ";
+.slide-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 250px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  pointer-events: none;
 }
 
-.button::after {
-    content: " 🚀";
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
 
-blockquote {
-    font-style: italic;
-    color: #555;
-    margin: 20px 0;
-    position: relative;
-}
-
-blockquote::before {
-    content: open-quote;
-    font-size: 40px;
-    position: absolute;
-    left: -10px;
-    top: -10px;
-    color: #ccc;
+.slide-menu.active {
+  animation: slideIn 0.5s ease forwards;
+  pointer-events: auto;
 }

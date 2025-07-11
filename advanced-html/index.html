@@ -7,19 +7,26 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <h1>Pseudo-element Example</h1>
+        <header>
+            <h1>Sass 숙제 페이지</h1>
+        </header>
 
-        <div class="highlight-box">
-            Important tip: Pseudo-elements let you add design without changing
-            HTML.
+        <div class="menu-container">
+            <button class="open-btn">메뉴 열기</button>
+            <div class="slide-menu">✨ 여기는 메뉴입니다 ✨</div>
         </div>
 
-        <p><button class="button">Click me</button></p>
+        <section class="card">
+            <h2>Card Title</h2>
+            <p>This is a card component styled using Sass mixins and variables.</p>
+            <button class="btn-primary btn-glow">확인하기</button>
+        </section>
 
-        <blockquote>
-            Always code as if the guy who ends up maintaining your code will be
-            a violent psychopath who knows where you live.
-        </blockquote>
+        <section class="card">
+            <h2>두 번째 카드</h2>
+            <p>반복되는 스타일은 mixin으로 처리되어 유지보수가 쉽습니다.</p>
+            <button class="btn-primary btn-glow">자세히</button>
+        </section>
 
         <div id="host"></div>
 
@@ -59,6 +66,27 @@
         }
 
         customElements.define("my-box", MyBox);
+        </script>
+
+        <h2>영상 예시</h2>
+        <video width="100%" controls poster="thumbnail.jpg">
+            <source src="intro.mp4" type="video/mp4" />
+            비디오를 재생할 수 없습니다.
+        </video>
+
+        <h2>배경 음악</h2>
+        <audio controls autoplay loop muted>
+            <source src="background.mp3" type="audio/mp3" />
+            오디오를 재생할 수 없습니다.
+        </audio>
+
+        <script>
+            const btn = document.querySelector('.open-btn');
+            const menu = document.querySelector('.slide-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
         </script>
     </body>
 </html>

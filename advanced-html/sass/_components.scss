@@ -1,0 +1,8 @@
+// _components.scss
+@use 'mixins';
+
+.card {
+  @include mixins.card-box;
+  background: white;
+  margin-bottom: 20px;
+}

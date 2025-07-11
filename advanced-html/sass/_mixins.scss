@@ -1,0 +1,8 @@
+// _mixins.scss
+@use 'variables';
+
+@mixin card-box {
+  padding: 16px;
+  border-radius: variables.$radius;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
