@@ -1,0 +1,93 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.modal-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.carousel-container {
+  width: 200px;
+  overflow: hidden;
+}
+#carousel-list {
+  display: flex;
+  transition: transform 0.3s;
+  padding: 0;
+  margin: 0;
+}
+#carousel-list li {
+  list-style: none;
+}
+
+#scroll-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: royalblue;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  transition: top 0.3s;
+}
+#scroll-menu.hidden-menu {
+  top: -60px;
+}
+
+.btn-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  z-index: 100;
+}
+.btn-top.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-top:not(.hidden) {
+  opacity: 1;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+.tab-btn.active {
+  background-color: #222;
+  color: white;
+}
