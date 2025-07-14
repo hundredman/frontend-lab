@@ -4,6 +4,10 @@
         <meta charset="UTF-8" />
         <title>JS 연습 페이지</title>
         <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+            rel="stylesheet"
+        />
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </head>
     <body>
@@ -198,6 +202,34 @@
             </div>
         </section>
 
+        <section>
+            <h2>🧩 이벤트 버블링 실습</h2>
+            <div class="card" id="card-example">
+                <p>
+                    이 텍스트를 클릭해도 카드 전체가 클릭된 것처럼 반응합니다.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>🔢 이벤트 위임 + dataset 실습</h2>
+            <div id="button-group">
+                <button data-index="1">버튼 1</button>
+                <button data-index="2">버튼 2</button>
+                <button data-index="3">버튼 3</button>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-aos="fade-up">✨ AOS 애니메이션 실습</h2>
+            <p data-aos="fade-right">이 텍스트는 오른쪽에서 등장합니다.</p>
+            <p data-aos="fade-left">이 텍스트는 왼쪽에서 등장합니다.</p>
+        </section>
+
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init(); // 초기화
+        </script>
         <script src="script.js"></script>
     </body>
 </html>

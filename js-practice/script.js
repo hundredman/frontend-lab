@@ -255,3 +255,18 @@ tabButtons.forEach((btn, index) => {
     activateTab(index);
   });
 });
+
+// 실습 23: 이벤트 버블링과 event 객체
+document.getElementById('card-example').addEventListener('click', function (event) {
+  alert('🟦 카드가 클릭되었습니다!');
+  console.log('event.target:', event.target);           // 실제 클릭된 요소
+  console.log('event.currentTarget:', event.currentTarget); // 이벤트가 연결된 요소
+});
+
+// 실습 24: 이벤트 위임 + dataset 활용
+document.getElementById('button-group').addEventListener('click', function (event) {
+  if (event.target.tagName === 'BUTTON') {
+    const index = event.target.dataset.index; // data-index 값 가져오기
+    alert(`📌 ${index}번 버튼을 눌렀습니다.`);
+  }
+});
