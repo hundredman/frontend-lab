@@ -13,6 +13,21 @@
     <body>
         <h1>자바스크립트 연습</h1>
 
+        <header id="sticky-header">
+            <h2>📌 상단 고정 메뉴</h2>
+        </header>
+
+        <header id="scroll-menu" class="hidden-menu">스크롤 메뉴입니다!</header>
+
+        <section>
+            <h2>🖱️ 스크롤 이벤트 실습</h2>
+            <p>스크롤을 아래로 내려보세요.</p>
+        </section>
+
+        <div id="scroll-box">🎉 짜잔! 여기 나타나는 박스입니다.</div>
+
+        <button id="btn-top" class="btn-top hidden">🔝 위로가기</button>
+
         <section>
             <h2>Alert 박스 실습</h2>
             <button id="btn-alert">누르면 인사해요</button>
@@ -179,15 +194,6 @@
             <p id="result-divide"></p>
         </section>
 
-        <header id="scroll-menu" class="hidden-menu">스크롤 메뉴입니다!</header>
-
-        <section>
-            <h2>🖱️ 스크롤 이벤트 실습</h2>
-            <p>스크롤을 아래로 내려보세요.</p>
-        </section>
-
-        <button id="btn-top" class="btn-top hidden">🔝 위로가기</button>
-
         <section>
             <h2>📁 탭 기능 (for 반복문 활용)</h2>
             <div class="tab-buttons">
@@ -224,6 +230,117 @@
             <h2 data-aos="fade-up">✨ AOS 애니메이션 실습</h2>
             <p data-aos="fade-right">이 텍스트는 오른쪽에서 등장합니다.</p>
             <p data-aos="fade-left">이 텍스트는 왼쪽에서 등장합니다.</p>
+        </section>
+
+        <section>
+            <h2>📋 회원 정보 바인딩</h2>
+            <div id="user-info"></div>
+        </section>
+
+        <section>
+            <h2>🐶 좋아하는 동물 고르기</h2>
+            <select id="animal-select">
+                <option value="">-- 동물 선택 --</option>
+                <option value="dog">강아지</option>
+                <option value="cat">고양이</option>
+                <option value="rabbit">토끼</option>
+            </select>
+            <button id="btn-animal">선택 완료</button>
+            <p id="animal-result"></p>
+        </section>
+
+        <section>
+            <h2>🖼️ 선택한 동물 이미지 출력</h2>
+            <select id="animal-select-2">
+                <option value="">-- 동물 선택 --</option>
+                <option value="dog">강아지</option>
+                <option value="cat">고양이</option>
+                <option value="rabbit">토끼</option>
+            </select>
+            <button id="btn-animal-img">이미지 보여주기</button>
+            <div id="animal-image-box"></div>
+        </section>
+
+        <section>
+            <h2>🔁 반복문으로 정보 출력</h2>
+            <button id="btn-show-hobby">취미 목록 출력</button>
+            <ul id="hobby-list"></ul>
+
+            <button id="btn-show-user">사용자 정보 출력</button>
+            <ul id="user-info-list"></ul>
+        </section>
+
+        <section>
+            <h2>🛍️ 상품 리스트 출력 과제</h2>
+            <button id="btn-show-products">상품 출력</button>
+            <ul id="product-display-list"></ul>
+        </section>
+
+        <section>
+            <h2>📦 상품 더보기</h2>
+            <ul id="product-more-list"></ul>
+            <button id="btn-more">상품 더보기</button>
+        </section>
+
+        <section>
+            <h2>📊 상품 정렬 / 필터 기능</h2>
+            <button id="btn-sort-price">💰 가격순 정렬</button>
+            <button id="btn-filter-cheap">💡 10만 원 이하 상품만</button>
+            <ul id="product-sort-list"></ul>
+        </section>
+
+        <section>
+            <button id="btn-dom">DOM 확인하기</button>
+        </section>
+
+        <section>
+            <h2>🛍️ 상품 리스트</h2>
+            <ul id="product-cart-list">
+                <li>노트북 <button data-name="노트북">담기</button></li>
+                <li>키보드 <button data-name="키보드">담기</button></li>
+                <li>마우스 <button data-name="마우스">담기</button></li>
+            </ul>
+
+            <h2>🛒 장바구니</h2>
+            <ul id="cart-list"></ul>
+        </section>
+
+        <section>
+            <h2>🖼️ 캐러셀 스와이프 실습</h2>
+            <div class="carousel-container2">
+                <ul id="carousel-list2">
+                    <li>
+                        <img
+                            src="https://picsum.photos/200/100?random=1"
+                            width="200"
+                        />
+                    </li>
+                    <li>
+                        <img
+                            src="https://picsum.photos/200/100?random=2"
+                            width="200"
+                        />
+                    </li>
+                    <li>
+                        <img
+                            src="https://picsum.photos/200/100?random=3"
+                            width="200"
+                        />
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>🎨 색상 선택하기</h2>
+            <select id="color-select">
+                <option value="">색상을 선택하세요</option>
+                <option value="red">빨강</option>
+                <option value="blue">파랑</option>
+                <option value="green">초록</option>
+            </select>
+            <button id="btn-color">선택한 색 보기</button>
+            <p id="color-result"></p>
         </section>
 
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>

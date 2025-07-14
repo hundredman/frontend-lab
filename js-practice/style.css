@@ -32,24 +32,25 @@ button {
   display: none;
 }
 
-.carousel-container {
+.carousel-container, .carousel-container2 {
   width: 200px;
   overflow: hidden;
 }
-#carousel-list {
+#carousel-list, #carousel-list2 {
   display: flex;
   transition: transform 0.3s;
   padding: 0;
   margin: 0;
 }
-#carousel-list li {
+#carousel-list li, #carousel-list2 li {
   list-style: none;
 }
 
 #scroll-menu {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 92px;
+  right: 28px;
+  width: auto;
   background-color: royalblue;
   color: white;
   text-align: center;
@@ -57,6 +58,8 @@ button {
   transition: top 0.3s;
 }
 #scroll-menu.hidden-menu {
+  opacity: 0;
+  pointer-events: none;
   top: -60px;
 }
 
@@ -98,4 +101,31 @@ button {
   margin-top: 10px;
   cursor: pointer;
   background-color: #f9f9f9;
+}
+
+/* 실습 35: sticky 메뉴 */
+#sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  z-index: 100;
+}
+
+#scroll-box {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  background: orange;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translateY(50px);
+  opacity: 0;
+}
+#scroll-box.show {
+  transform: translateY(0);
+  opacity: 1;
 }
