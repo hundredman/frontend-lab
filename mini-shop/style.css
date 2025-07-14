@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin: 5px 0;
+}
+
+button {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: #222;
+  color: white;
+}
