@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shadow DOM 실습</title>
+</head>
+<body>
+
+  <my-card></my-card>
+
+  <template id="card-template">
+    <style>
+      .card {
+        padding: 10px;
+        margin: 10px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+      }
+    </style>
+    <div class="card">
+      <h3>사용자 카드</h3>
+      <p>이름: 영희</p>
+    </div>
+  </template>
+
+  <script>
+    class MyCard extends HTMLElement {
+      constructor() {
+        super();
+        const shadow = this.attachShadow({ mode: "open" });
+
+        const template = document.getElementById("card-template");
+        const content = template.content.cloneNode(true);
+
+        shadow.appendChild(content);
+      }
+    }
+
+    customElements.define("my-card", MyCard);
+  </script>
+</body>
+</html>
