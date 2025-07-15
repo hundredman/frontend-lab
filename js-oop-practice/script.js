@@ -734,3 +734,15 @@ class MyGreeting extends HTMLElement {
 }
 
 customElements.define("my-greeting", MyGreeting);
+
+// ?. / ?? 연산자
+const user5 = {
+  name: "영희",
+  profile: {
+    email: "younghee@example.com"
+  }
+};
+
+console.log("이메일:", user5.profile?.email);        // 👉 존재하므로 출력
+console.log("전화번호:", user5.profile?.phone);      // 👉 undefined
+console.log("주소:", user5.address?.city ?? "주소 없음");  // 👉 "주소 없음"
