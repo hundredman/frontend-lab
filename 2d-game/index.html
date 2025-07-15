@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>2D 캐릭터 이동 게임</title>
+        <style>
+            #gameArea {
+                width: 400px;
+                height: 400px;
+                background: #eee;
+                position: relative;
+                border: 2px solid #000;
+            }
+
+            .player {
+                width: 40px;
+                height: 40px;
+                background: tomato;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .enemy {
+                width: 40px;
+                height: 40px;
+                background: royalblue;
+                position: absolute;
+                top: 200px;
+                left: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>← ↑ ↓ → 키로 캐릭터를 움직이세요!</h2>
+        <div id="gameArea">
+            <div class="player" id="player"></div>
+            <div class="enemy" id="enemy"></div>
+        </div>
+
+        <script src="game.js"></script>
+    </body>
+</html>
